@@ -3,9 +3,9 @@ scoreboard players set #game ctf_game 0
 scoreboard players set #time ctf_time 0
 
 # 清除所有旗帜
-clear @a minecraft:diamond[custom_data={ctf_flag:1b}]
-kill @e[type=item,nbt={Item:{id:"minecraft:diamond",components:{"minecraft:custom_data":{"ctf_flag":1b}}}}]
-kill @e[type=item_frame,nbt={Item:{id:"minecraft:diamond",components:{"minecraft:custom_data":{"ctf_flag":1b}}}}]
+clear @a minecraft:diamond[components={"minecraft:custom_data":{"ctf_flag":1b}}]
+kill @e[type=minecraft:item,nbt={Item:{id:"minecraft:diamond",components:{"minecraft:custom_data":{"ctf_flag":1b}}}}]
+kill @e[type=minecraft:item_frame,nbt={Item:{id:"minecraft:diamond",components:{"minecraft:custom_data":{"ctf_flag":1b}}}}]
 
 # 清空队伍
 team empty ctf_defend
@@ -21,9 +21,9 @@ scoreboard players set #god_dis god_disable_tracking 0
 
 # 清除追踪实体、发光、悬浮文字
 effect clear @a minecraft:glow
-clear @a minecraft:compass{components:{"minecraft:custom_data":{"ctf_track_flag":1b}}}
-kill @e[type=marker,tag=flag_tracker]
-kill @e[type=text_display,tag=ctf_flag_head_tag]
+clear @a minecraft:compass[components={"minecraft:custom_data":{"ctf_track_flag":1b}}]
+kill @e[type=minecraft:marker,tag=flag_tracker]
+kill @e[type=minecraft:text_display,tag=ctf_flag_head_tag]
 
 # 心跳、唯一ID重置
 scoreboard players set #off_tick flag_off_tick 0

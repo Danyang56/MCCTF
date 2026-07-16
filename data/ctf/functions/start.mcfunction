@@ -7,12 +7,12 @@ scoreboard players set #unique_id flag_unique_id 0
 scoreboard players random #unique_id flag_unique_id 1 99999
 
 # 清空上局残留所有旗帜
-clear @a minecraft:diamond[custom_data={ctf_flag:1b}]
-kill @e[type=item,nbt={Item:{id:"minecraft:diamond",components:{"minecraft:custom_data":{"ctf_flag":1b}}}}]
-kill @e[type=item_frame,nbt={Item:{id:"minecraft:diamond",components:{"minecraft:custom_data":{"ctf_flag":1b}}}}]
+clear @a minecraft:diamond[components={"minecraft:custom_data":{"ctf_flag":1b}}]
+kill @e[type=minecraft:item,nbt={Item:{id:"minecraft:diamond",components:{"minecraft:custom_data":{"ctf_flag":1b}}}}]
+kill @e[type=minecraft:item_frame,nbt={Item:{id:"minecraft:diamond",components:{"minecraft:custom_data":{"ctf_flag":1b}}}}]
 
 # 随机给一名防守玩家发放正版旗帜
-execute @a[team=ctf_defend,sort=random,limit=1] run give @s minecraft:diamond[custom_data={ctf_flag:1b,flag_unique_uuid:#unique_id},display={Name:'{"text":"夺旗赛旗帜","color":"gold","bold":true}'}]
+execute @a[team=ctf_defend,sort=random,limit=1] run give @s minecraft:diamond[components={"minecraft:custom_data":{"ctf_flag":1b,"flag_unique_uuid:#unique_id"}},display={Name:'{"text":"夺旗赛旗帜","color":"gold","bold":true}'}]
 
 # 聊天栏广播
 tellraw @a {"text":"=====夺旗赛开始=====","color":"yellow"}

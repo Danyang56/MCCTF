@@ -31,6 +31,9 @@ scoreboard objectives add flag_off_tick dummy
 scoreboard players set #off_tick flag_off_tick 0
 scoreboard objectives add hb_threshold dummy
 scoreboard players set #hb_limit hb_threshold 1200
+scoreboard objectives add hb_sec dummy
+scoreboard objectives add hb_div dummy
+scoreboard players set #hb_div flag_posY 20
 
 # 末影箱规则
 scoreboard objectives add enderchest_flag_rule dummy
