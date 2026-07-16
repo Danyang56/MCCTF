@@ -1,0 +1,1 @@
+execute if score #game ctf_game matches 1 run function ctf:_tick_logic
