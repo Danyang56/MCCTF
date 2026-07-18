@@ -10,7 +10,7 @@ scoreboard players set #hb_switch flag_heartbeat_switch 0
 effect clear @a minecraft:glow
 kill @e[type=minecraft:text_display,tag=ctf_flag_head_tag]
 kill @e[type=minecraft:marker,tag=flag_tracker]
-clear @a minecraft:compass[components={"minecraft:custom_data":{"ctf_track_flag":1b}}]
+clear @a minecraft:compass[custom_data={ctf_track_flag:1b}]
 
 # 全员OP
 op @a

@@ -6,7 +6,8 @@ team modify ctf_attack color red
 
 # 基础游戏状态记分板
 scoreboard objectives add ctf_game dummy "游戏状态"
-scoreboard objectives add ctf_time dummy "剩余时间"
+scoreboard objectives add ctf_time dummy "剩余时间（刻）"
+scoreboard objectives add ctf_time_sec dummy "剩余时间（秒）"
 scoreboard players set #game ctf_game 0
 
 # 烫手山芋开关
