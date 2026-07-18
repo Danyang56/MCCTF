@@ -20,7 +20,7 @@ scoreboard players set #god godmode_switch 0
 scoreboard players set #god_dis god_disable_tracking 0
 
 # 清除追踪实体、发光、悬浮文字
-effect clear @a minecraft:glow
+effect clear @a minecraft:glowing
 clear @a minecraft:compass[custom_data={ctf_track_flag:1b}]
 kill @e[type=minecraft:marker,tag=flag_tracker]
 kill @e[type=minecraft:text_display,tag=ctf_flag_head_tag]
